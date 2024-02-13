@@ -1,0 +1,11 @@
+version: '3.3'
+services:
+  email_sender:
+    build: .
+    command: tail -f /dev/null
+    volumes:
+      - .:/app
+      - /app/node_modules
+    environment:
+      - EMAIL_ADDRESS=
+      - EMAIL_PASSWORD=
